@@ -26,7 +26,7 @@ npm config set msvs_version 2013 --global  (2013是visual studio的版本，你�
 <h3>Hello world</h3><br>
 1.新建一个项目文件夹，创建index.html和package.json文件：
 
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -58,9 +58,11 @@ npm config set msvs_version 2013 --global  (2013是visual studio的版本，你�
     </script>
     </body>
 
-</html>
+</html-->
+
 
 package.json
+<!--
 {<br>
   "name": "test",<br>
   "version": "1.0.1",<br>
@@ -69,6 +71,7 @@ package.json
 	"plugin" : true<br>
   }<br>
 }<br>
+-->
 注意package.json文件里需要添加webkit属性来说明你需要调用第三方包。<br><br>
 2.DOS界面下进入项目文件夹，安装ffi和ref：<br>
 npm install ffi<br>
