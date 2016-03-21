@@ -7,13 +7,13 @@
 这是最大的泪点，没想到就调用下dll而已，居然还牵扯到VS，牵扯到也就算了，还这样百般折磨人。。。算了表抱怨。还算庆幸是爬出来了，不知道还有多少程序猿兄弟们躺倒的这个大坑里出不来呢。<br>
 3.<b>nodeJS 0.12.3</b><br>
 下载地址：<a href="https://nodejs.org/download/release/v0.12.3/node-v0.12.3-x86.msi">https://nodejs.org/download/release/v0.12.3/node-v0.12.3-x86.msi</a><br>
-文件是msi格式，直接安装即可，环境变量自动配好不用管。（其他版本没试过，心好累~~~）<br>
+文件是msi格式，直接安装即可，环境变量自动配好不用管。（其他版本没试过，心好累）<br>
 4.<b>Python 2.7.6</b><br>
 下载地址<a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi">https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi</a><br>
 装完了以后要手动添加环境变量，不会的自己搜一下...<br>
 5.<b>nwjs 0.12.3</b><br>
 下载地址：<a href="http://dl.nwjs.io/v0.12.3/nwjs-v0.12.3-win-ia32.zip">http://dl.nwjs.io/v0.12.3/nwjs-v0.12.3-win-ia32.zip</a><br>
-其他版本没试过，心好累~~不想用这个版本可以自己下了再试试<br>
+（其他版本没试过，心好累）不想用这个版本可以自己下了再试试<br>
 
 
 <h3>开始动手</h3><br>
