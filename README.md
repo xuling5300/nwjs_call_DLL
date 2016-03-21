@@ -26,7 +26,6 @@ npm config set msvs_version 2013 --global  (2013是visual studio的版本，你�
 <h3>Hello world</h3><br>
 1.新建一个项目文件夹，创建index.html和package.json文件：
 
-index.html
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -62,11 +61,20 @@ index.html
 </html>
 
 package.json
-{
-  "name": "test",
-  "version": "1.0.1",
-  "main": "index.html",
-  "webkit":{
-	"plugin" : true
-  }
-}
+{<br>
+  "name": "test",<br>
+  "version": "1.0.1",<br>
+  "main": "index.html",<br>
+  "webkit":{<br>
+	"plugin" : true<br>
+  }<br>
+}<br>
+注意package.json文件里需要添加webkit属性来说明你需要调用第三方包。<br><br>
+2.DOS界面下进入项目文件夹，安装ffi和ref：<br>
+npm install ffi<br>
+npm install ref<br>
+3.编译ffi和ref模块，因为ffi中包含ref所以先编译ref再编译ffi，依次的命令如下：<br>
+进入'项目目录\node_modules\ffi\node_modules\ref\'，执行nw-gyp rebuild --target=0.12.3 (0.12.3是你的nwjs版本，如果不是这个版本改为你自己的即可)<br>
+进入'项目目录\node_modules\ffi\'，执行nw-gyp rebuild --target=0.12.3<br>
+4.最后在你的项目文件夹下将所有文件打包为zip格式，将zip文件拖进node-webkit目录下的nw.exe文件上执行即可。<br>
+5.看到界面上弹出“I am Node.JS!”说明成功了！
