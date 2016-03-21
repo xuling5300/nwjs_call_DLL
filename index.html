@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>nwjs call DLL</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+    </head>
+
+    <body>
+    <script type="text/javascript">
+		var FFI = require('ffi');
+
+		function TEXT(text){
+		   return new Buffer(text, 'ucs2').toString('binary');
+		}
+
+		var user32 = new FFI.Library('user32', {
+		   'MessageBoxW': 
+		   [
+			  'int32', [ 'int32', 'string', 'string', 'int32' ]
+		   ]
+		});
+
+		var OK_or_Cancel = user32.MessageBoxW(
+		   0, TEXT('I am Node.JS!'), TEXT('Hello, World!'), 1
+		);
+		console.log(OK_or_Cancel);
+    </script>
+    </body>
+
+</html>
