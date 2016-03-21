@@ -26,8 +26,7 @@ npm config set msvs_version 2013 --global  (2013是visual studio的版本，你�
 <h3>Hello world</h3><br>
 1.新建一个项目文件夹，创建index.html和package.json文件：
 （测试是用的windows系统里的消息窗口dll文件）
-<code>
-<!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -60,7 +59,7 @@ npm config set msvs_version 2013 --global  (2013是visual studio的版本，你�
     </body>
 
 </html>
-</code>
+
 
 package.json
 {<br>
