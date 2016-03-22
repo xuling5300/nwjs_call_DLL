@@ -82,3 +82,9 @@ npm install ref<br><br>
 5.看到界面上弹出“I am Node.JS!”说明成功了！<br><br>
 
 参考：<a href="https://cnodejs.org/topic/5413945d8895083262b77401">https://cnodejs.org/topic/5413945d8895083262b77401</a>
+
+
+提示：<br>
+1.由于ffi模块是为C语言的dll包服务的，所以你自己编写的dll必须要有 extern “C” 来修饰。例如在你的c++代码里需要这样写才能有效：<br>
+extern "C" DLLSERVER_API int sumInDll(int n1, int n2);<br>
+2.经过几天的测试，我发现ffi似乎是不支持64位的。也就是说使用64位的dll和64位的nw环境，运行结果不成功。由于项目的特殊情况需要同时使用32和64位的dll，最终放弃这个方案，改用addon。
