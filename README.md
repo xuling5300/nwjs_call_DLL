@@ -85,6 +85,7 @@ npm install ref<br><br>
 
 
 提示：<br>
-1.由于ffi模块是为C语言的dll包服务的，所以你自己编写的dll必须要有 extern “C” 来修饰。例如在你的c++代码里需要这样写才能有效：<br>
-extern "C" DLLSERVER_API int sumInDll(int n1, int n2);<br>
-2.经过几天的测试，我发现ffi似乎是不支持64位的。也就是说使用64位的dll和64位的nw环境，运行结果不成功。由于项目的特殊情况需要同时使用32和64位的dll，最终放弃这个方案，改用addon。
+1.由于ffi模块是为C语言的dll包服务的，所以在编写的dll的C++源代码时必须要有 extern “C” 来修饰。例如在你的c++代码里需要这样声明函数才能有效（在.h文件中声明时使用）：<br>
+extern "C" DLLSERVER_API int sumInDll(int n1, int n2);<br><br>
+2.ffi在使用时需要匹配对应的环境，如果是32位dll文件，那么在安装nodeJS，python和nwjs都需要用对应的32位版本；如果是64位dll文件，则对应的软件都需要是64位的；<br><br>
+3.ffi在用的时候还是挺方便的，只要环境匹配对就可以。唯一的麻烦是它需要对源dll代码声明时进行修改，这个就不如addon一劳永逸了。所以如果引用的dll文件比较多，或者是引入第三方dll文件，ffi的方法就不可取。
